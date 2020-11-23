@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator)]
+
 public class CharacterAnimation2D : MonoBehaviour
 {
-  [RequireComponent(typeof(Animator)]
   private Animator Animator;
 
   private void Awake()
@@ -13,8 +14,7 @@ public class CharacterAnimation2D : MonoBehaviour
   }
   private void Update()
   {
-    HorizontalMove = Input.GetAxisRaw("Horizontal") * RunSpeed;
-    Animator.SetFloat("Speed", Mathf.Abs(HorizontalMove));
+    Animator.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
     if (Input.GetButtonDown("Jump"))
     {
         Animator.SetBool("IsJumping", true);

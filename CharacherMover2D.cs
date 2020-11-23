@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D),typeof(BoxCollider2D))]
+
 public class CharacterMover2D : MonoBehaviour
 {
-	[RequireComponent(typeof(Rigidbody2D),typeof(BoxCollider2D))]
 	[SerializeField] private float RunSpeed = 40f;
 	[SerializeField] private float JumpForce = 400f;                          // Amount of force added when the player jumps.
 	[Range(0, .3f)] [SerializeField] private float MovementSmoothing = .05f;  // How much to smooth out the movement
