@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterLogic : MonoBehaviour
+public class CharacterAnimation2D : MonoBehaviour
 {
   [RequireComponent(typeof(Animator)]
   private Animator Animator;
